@@ -28,5 +28,4 @@ public class LimitedTimeLife : MonoBehaviour
     {
         SelfDestroy();
     }
-
 }

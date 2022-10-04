@@ -63,6 +63,7 @@ public class ObstaclesGenerator : MonoBehaviour
             Instantiate(_prefabs[Random.Range(0, _prefabs.Length)], _spawnTransform.position, Quaternion.identity);
             _elapsedTime = 0.0f;
             _nextSpawnTime = Random.Range(_minTimeInterval, _maxTimeInterval);
+            Debug.Log("Obstáculo instanciado.");
         }
     }
 }
