@@ -49,6 +49,14 @@ public class ObstaclesGenerator : MonoBehaviour
     /// </summary>
     private void Stop()
     {
+        
+        var clones = GameObject.FindGameObjectsWithTag("Clone");
+        foreach (var clone in clones)
+        {
+            Destroy(clone);
+        }
+        //Destroy(GameObject.FindWithTag("Clone"));
+        Debug.Log("Generación de obstáculos parada.");
         Behaviour.Destroy(this);
     }
     #endregion

@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scarecrow Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2593891206015117072, guid: ef2b6e3a0904d0a488fb7a1bd47ce073, type: 3}
+      propertyPath: m_TagString
+      value: Clone
+      objectReference: {fileID: 0}
     - target: {fileID: 2593891206015117074, guid: ef2b6e3a0904d0a488fb7a1bd47ce073, type: 3}
       propertyPath: m_RootOrder
       value: 0

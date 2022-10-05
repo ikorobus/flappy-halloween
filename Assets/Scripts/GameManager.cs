@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void Jump()
     {
-        Debug.Log("Mensaje recibido en GameManager.");
+        //Debug.Log("Mensaje recibido en GameManager.");
         _player.SendMessage("Jump");
     }
     /// <summary>
@@ -53,7 +53,9 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void OnPlayerDies()
     {
-        //TODO
+        SendMessage("GameOver");
+        SendMessage("Stop");
+        _levelManager.SendMessage("GameOver");
     }
     #endregion
 
@@ -61,11 +63,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _player = GameObject.Find("Player");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        _levelManager = GameObject.Find("Level");
     }
 }

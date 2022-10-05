@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class LifeComponent : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    #region references
+    /// <summary>
+    /// Reference to Game Manager object
+    /// </summary>
+    [SerializeField]
+    private GameObject _gameManager;
+    #endregion
 
-    // Update is called once per frame
-    void Update()
+    #region methods
+    /// <summary>
+    /// Executed on collision. The component informs GameManger of its death before destroying itself.
+    /// </summary>
+    /// <param name="collision">Colliding element collision</param>
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        _gameManager.SendMessage("OnPlayerDies");
+        Debug.Log("Colisión.");
+        Destroy(this.gameObject);
+        _gameManager.GetComponent<InputComponent>().enabled = false;
     }
+    #endregion
 }

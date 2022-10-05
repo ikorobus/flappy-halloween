@@ -19,7 +19,7 @@ public class LimitedTimeLife : MonoBehaviour
     private void SelfDestroy()
     {
         Object.Destroy(this.gameObject, _maxLifetime);
-        Debug.Log("Muerto.");
+        Debug.Log("Objeto destruido.");
     }
     #endregion
 
