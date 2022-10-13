@@ -45,7 +45,6 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void Jump()
     {
-        //Debug.Log("Mensaje recibido en GameManager.");
         _player.SendMessage("Jump");
     }
     /// <summary>

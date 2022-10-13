@@ -46,8 +46,7 @@ public class ParalaxScroller : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
-        // Background movement
+    {   // Background movement
         _offset = _scrollSpeed * Time.deltaTime * Vector2.right;
         _myMaterial.mainTextureOffset += _offset;
     }

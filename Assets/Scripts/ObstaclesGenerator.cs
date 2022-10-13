@@ -49,14 +49,12 @@ public class ObstaclesGenerator : MonoBehaviour
     /// </summary>
     private void Stop()
     {
-        
         var clones = GameObject.FindGameObjectsWithTag("Clone");
         foreach (var clone in clones)
         {
             Destroy(clone);
         }
-        //Destroy(GameObject.FindWithTag("Clone"));
-        Debug.Log("Generación de obstáculos parada.");
+        Debug.Log("Stopped obstacle generation.");
         Behaviour.Destroy(this);
     }
     #endregion
@@ -71,7 +69,7 @@ public class ObstaclesGenerator : MonoBehaviour
             Instantiate(_prefabs[Random.Range(0, _prefabs.Length)], _spawnTransform.position, Quaternion.identity);
             _elapsedTime = 0.0f;
             _nextSpawnTime = Random.Range(_minTimeInterval, _maxTimeInterval);
-            Debug.Log("Obstáculo instanciado.");
+            Debug.Log("Instantiated obstacle.");
         }
     }
 }

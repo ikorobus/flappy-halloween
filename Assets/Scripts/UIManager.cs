@@ -27,7 +27,7 @@ public class UIManager : MonoBehaviour
     {
         if (_gameOverObject != null)
         {
-            Debug.Log("Canvas encontrado.");
+            Debug.Log("Canvas object found.");
             _gameOverObject.SetActive(false);
         }
     }
