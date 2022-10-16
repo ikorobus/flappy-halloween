@@ -57,11 +57,4 @@ public class GameManager : MonoBehaviour
         _levelManager.SendMessage("GameOver");
     }
     #endregion
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        _player = GameObject.Find("Player");
-        _levelManager = GameObject.Find("Level");
-    }
 }
