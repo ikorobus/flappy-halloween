@@ -1385,8 +1385,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 466136496}
-  _UIManager: {fileID: 0}
-  _levelManager: {fileID: 0}
+  _UIManager: {fileID: 1758226798}
+  _levelManager: {fileID: 1370955713}
 --- !u!114 &2108922152
 MonoBehaviour:
   m_ObjectHideFlags: 0
