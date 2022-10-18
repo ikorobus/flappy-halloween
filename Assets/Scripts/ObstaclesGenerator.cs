@@ -28,8 +28,6 @@ public class ObstaclesGenerator : MonoBehaviour
     /// </summary>
     [SerializeField]
     private float _minTimeInterval = 1.0f;
-
-    private int _count;
     #endregion
 
     #region properties
@@ -49,8 +47,7 @@ public class ObstaclesGenerator : MonoBehaviour
     /// </summary>
     private void Stop()
     {
-        var clones = GameObject.FindGameObjectsWithTag("Clone");
-        foreach (var clone in clones)
+        foreach (var clone in GameObject.FindGameObjectsWithTag("Clone"))
         {
             Destroy(clone);
         }

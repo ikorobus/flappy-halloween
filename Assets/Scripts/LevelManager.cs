@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
     {
         foreach (ParalaxScroller ps in GetComponentsInChildren<ParalaxScroller>())
         {
-            ps.enabled = false;
+            ps.Stop() ;
         }
     }
     #endregion

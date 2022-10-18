@@ -9,7 +9,6 @@ public class InputComponent : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump")) {
             SendMessage("Jump");
-            Debug.Log("Has pulsado la barra espaciadora.");
         }
     }
 }

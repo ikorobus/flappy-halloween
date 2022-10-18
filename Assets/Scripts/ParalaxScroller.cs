@@ -18,10 +18,6 @@ public class ParalaxScroller : MonoBehaviour
 
     #region References
     /// <summary>
-    /// Reference to own Sprite Renderer
-    /// </summary>
-    private SpriteRenderer _mySpriteRenderer;
-    /// <summary>
     /// Reference to own Material
     /// </summary>
     private Material _myMaterial;
@@ -31,16 +27,15 @@ public class ParalaxScroller : MonoBehaviour
     /// <summary>
     /// Disables the component, so the texture movement stops
     /// </summary>
-    private void Stop()
+    public void Stop()
     {
-        _mySpriteRenderer.enabled = false;
+        _scrollSpeed = 0;
     }
     #endregion
 
     // Start is called before the first frame update
     void Start()
     {   // Accesses
-        _mySpriteRenderer = GetComponent<SpriteRenderer>();
         _myMaterial = GetComponent<SpriteRenderer>().material;
     }
 

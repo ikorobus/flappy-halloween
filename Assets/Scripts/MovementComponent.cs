@@ -27,7 +27,6 @@ public class MovementComponent : MonoBehaviour
     /// </summary>
     private void Jump()
     {
-        //Debug.Log("Mensaje recibido en Player");
         _myRigidBody2D.velocity = Vector2.zero;
         _myRigidBody2D.AddForce(_jumpForce * Vector2.up, ForceMode2D.Impulse);
     }
