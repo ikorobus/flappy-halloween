@@ -21,7 +21,6 @@ public class LifeComponent : MonoBehaviour
     {
         Debug.Log("Collision.");
         _gameManager.SendMessage("OnPlayerDies");
-        _gameManager.GetComponent<InputComponent>().enabled = false;
         Destroy(this.gameObject);
     }
     #endregion
