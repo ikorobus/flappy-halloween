@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
     private void GameOver()
     {
         foreach (ParalaxScroller ps in GetComponentsInChildren<ParalaxScroller>())
-        {
+        {   
             ps.Stop() ;
         }
     }

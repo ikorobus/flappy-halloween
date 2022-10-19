@@ -18,6 +18,10 @@ public class ParalaxScroller : MonoBehaviour
 
     #region References
     /// <summary>
+    /// Reference to own Sprite Renderer ** Redundant ??? **
+    /// </summary>
+    private SpriteRenderer _mySpriteRenderer;
+    /// <summary>
     /// Reference to own Material
     /// </summary>
     private Material _myMaterial;
@@ -36,7 +40,8 @@ public class ParalaxScroller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   // Accesses
-        _myMaterial = GetComponent<SpriteRenderer>().material;
+        _mySpriteRenderer = GetComponent<SpriteRenderer>();
+        _myMaterial = _mySpriteRenderer.material;
     }
 
     // Update is called once per frame

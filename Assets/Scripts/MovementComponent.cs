@@ -37,5 +37,4 @@ public class MovementComponent : MonoBehaviour
     {
         _myRigidBody2D = GetComponent<Rigidbody2D>();
     }
-
 }

@@ -38,7 +38,7 @@ public class ObstaclesGenerator : MonoBehaviour
     /// <summary>
     /// Time interval set for next obstacle generation
     /// </summary>
-    private float _nextSpawnTime = 2.0f;
+    private float _nextSpawnTime;
     #endregion
 
     #region methods

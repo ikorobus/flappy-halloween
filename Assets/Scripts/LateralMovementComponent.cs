@@ -17,6 +17,10 @@ public class LateralMovementComponent : MonoBehaviour
     /// Reference to own transform
     /// </summary>
     private Transform _myTransform;
+    /// <summary>
+    /// Reference to Game Manager ** Useless variable ??? **
+    /// </summary>
+    private GameManager _gameManager;
     #endregion
 
     // Start is called before the first frame update

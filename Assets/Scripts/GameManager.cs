@@ -22,6 +22,23 @@ public class GameManager : MonoBehaviour
     private GameObject _levelManager;
     #endregion
 
+    #region properties
+    /// <summary>
+    /// True if the Game is running, False otherwise
+    /// </summary>
+    private bool _isGameRunning;
+    /// <summary>
+    /// Accesor to get the state of the game
+    /// </summary>
+    public bool IsGameRunning
+    {
+        get
+        {
+            return _isGameRunning;
+        }
+    }
+    #endregion
+
     #region methods
     /// <summary>
     /// Method to send message Jump to player
@@ -37,8 +54,10 @@ public class GameManager : MonoBehaviour
     {
         SendMessage("GameOver");
         SendMessage("Stop");
-        GetComponent<InputComponent>().enabled = false;
         _levelManager.SendMessage("GameOver");
+        GetComponent<InputComponent>().enabled = false; // Disabling input after call
     }
     #endregion
+
+    // Start() was removed because it was empty
 }
